@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">FastReading</string>
+    <string name="title_book">Book</string>
+    <string name="title_store">Store</string>
+    <string name="title_profile">Profile</string>
 </resources>
