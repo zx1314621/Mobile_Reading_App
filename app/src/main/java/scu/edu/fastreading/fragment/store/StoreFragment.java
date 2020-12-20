@@ -40,8 +40,8 @@ public class StoreFragment extends Fragment {
                 ViewModelProviders.of(this).get(StoreViewModel.class);
         View root = inflater.inflate(R.layout.fragment_store, container, false);
 
-        pager=root.findViewById(R.id.page);
-        tabLayout=root.findViewById(R.id.tab_layout);
+        pager=root.findViewById(R.id.viewpager);
+        tabLayout=root.findViewById(R.id.tablayout);
 
 
         return root;
