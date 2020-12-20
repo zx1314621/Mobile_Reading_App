@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="profile_blue_top">#6442f8</color>
+    <color name="prifile_blue_bottom">#6776f7</color>
+    <color name="colorbackground">#F8F8FF</color>
 </resources>
