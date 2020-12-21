@@ -11,19 +11,15 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import scu.edu.fastreading.Profile;
 import scu.edu.fastreading.R;
 
 
@@ -65,15 +61,15 @@ public class ProfileFragment extends Fragment {
         final HashMap<String, Object> map4 = new HashMap<String, Object>();
 
         map.put("itemImage", bmp);
-        map.put("text", "recent");
+        map.put("text", "最近浏览");
         map1.put("itemImage", bmp1);
-        map1.put("text", "share");
+        map1.put("text", "分享应用");
         map2.put("itemImage", bmp2);
-        map2.put("text", "like");
+        map2.put("text", "去评分");
         map3.put("itemImage", bmp3);
-        map3.put("text", "text_download");
+        map3.put("text", "小说缓存");
         map4.put("itemImage", bmp4);
-        map4.put("text", "comic_download");
+        map4.put("text", "漫画缓存");
 
         images.add(map);
         images.add(map1);
