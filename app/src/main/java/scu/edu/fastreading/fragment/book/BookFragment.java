@@ -47,7 +47,6 @@ public class BookFragment extends Fragment {
         bookViewModel =
                 ViewModelProviders.of(this).get(BookViewModel.class);
         View root = inflater.inflate(R.layout.fragment_book, container, false);
-        final TextView textView = root.findViewById(R.id.text_book);
         this.mcontext = getActivity();
         arrow = root.findViewById(R.id.arrow);
         search1 = root.findViewById(R.id.search1);
@@ -74,12 +73,7 @@ public class BookFragment extends Fragment {
             }
         });
 
-        bookViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
 
         mGridRv = root.findViewById(R.id.RV_grid_id);
 
