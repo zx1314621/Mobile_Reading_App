@@ -47,7 +47,6 @@ public class BookFragment extends Fragment {
         bookViewModel =
                 ViewModelProviders.of(this).get(BookViewModel.class);
         View root = inflater.inflate(R.layout.fragment_book, container, false);
-        final TextView textView = root.findViewById(R.id.text_book);
         this.mcontext = getActivity();
         arrow = root.findViewById(R.id.arrow);
         search1 = root.findViewById(R.id.search1);
@@ -74,12 +73,7 @@ public class BookFragment extends Fragment {
             }
         });
 
-        bookViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
 
         mGridRv = root.findViewById(R.id.RV_grid_id);
 
@@ -100,7 +94,8 @@ public class BookFragment extends Fragment {
         book1.setBookDesc("当三国演义里的撒豆成兵成了真，当豪桀纵横、熊据虎跱的三国争霸时代，撞上‘五胡’入侵，将会谱写一曲怎样可歌可泣的英雄史？最强蒙古！最强契丹！最强鲜卑！最强女真！最强突厥！还有众多的异族悍将降临此世！汉末粉墨登场的名将谋士，面对这曾属于汉族的至暗时代，面对这险象环生的旷古危局，当做出怎样的抉择？是束手就擒被当两脚羊？是俯首称臣去做卑躬屈膝的狗？亦或是拿起手中的兵器，吼出今生最强音：汉胡不两立、王业不偏安！一个全新的时代正在徐徐展开……天降英豪穿吕布，五胡入侵浑不怕，今这乱世我来平，汉家天下我来定，复我华夏炎黄土，名将谋臣四海赴，试问我有何资本，单凭吾叫吕奉先！……看惯了各式各样的三国争霸，那么就来些不同口味的新三国争霸，熟悉的名字，熟悉的背景，只是不同的是全新的战斗。书友群：938.887.683");
         book1.setLastEditContent("第一百一十四章 雒阳风波，人生百态");
         book1.setLastEditTime(new Date());
-        book1.setBookImg(R.drawable.book1+"");
+        book1.setBookImg(String.valueOf(R.drawable.book1));
+
 
 
         Book book2 = new Book();
