@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +47,9 @@ public class BookRecyclerViewAdapter extends RecyclerView.Adapter<BookRecyclerVi
         holder.update_content.setText(bookList.get(position).getLastEditContent());
         holder.update_time.setText(bookList.get(position).getLastEditTime().toString());
 
-        holder.book_image.setImageResource(Integer.valueOf(bookList.get(position).getBookImg()));
+        //holder.book_image.setImageResource(Integer.valueOf(bookList.get(position).getBookImg()));
+        String url="http://pic17.nipic.com/20111101/8730615_113658400143_2.jpg";
+        Glide.with(mContext).load(Integer.valueOf(bookList.get(position).getBookImg())).into(holder.book_image);
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
